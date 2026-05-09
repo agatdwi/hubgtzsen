@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubgtzsen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+      <div class="container-fluid ps-4 pe-4">
+        <a class="navbar-brand fw-bold fs-3" href="#home">
+          <img src="img/logo_hubgtzsen-ec9879fc.svg" id="logo-navbar" class="me-2" alt="Logo Hubgtzsen">
+          Hubgtzsen
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto fw-bold fs-5">
+            <a class="nav-link text-dark" href="#home">Home</a>
+            <a class="nav-link text-dark mx-3" href="#fitur">Fitur</a>
+            <a class="nav-link text-dark" href="#harga">Harga</a>
+            <a class="nav-link text-dark mx-3" href="#kontak">Kontak</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+  <main>
+    <section id="home" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="img/High School-amico.svg" alt="Ilustrasi sekolah modern" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h1 class="content-kanan text-secondary fw-bold fs-1" id="hero-heading">
+              <span>Hubgtzsen</span> Menyediakan Sistem Absensi dan Monitoring Untuk Sekolah dan Kampus Inovatif!
+            </h1>
+            <p class="mt-3 text-muted fs-5" style="font-family:'Poppins',sans-serif;">
+              Absensi cepat, aman, dan akurat — via Face ID, QR Code, atau GPS.
+            </p>
+            <button type="button" class="btn text-light mt-3 fs-5" id="btn-coba-sekarang"
+              onclick="scrollToKontak()">
+              Coba Sekarang!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats-bar" aria-label="Statistik Hubgtzsen">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md-3 stat-item">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">Pengguna Aktif</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">Sekolah & Instansi</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">% Akurasi Absensi</div>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">Metode Absensi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fitur" aria-labelledby="fitur-heading">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-3" id="fitur-heading">
+          Manajemen Sekolah yang Terpadu: Absensi, Jadwal, dan E-Raport untuk Guru dan Siswa.
+        </h2>
+        <h3 class="text-center mt-2 mb-5 fw-normal fs-5 text-secondary">
+          Hubgtzsen memberikan kemudahan absensi dengan berbagai metode, akses jadwal belajar mengajar, dan integrasi dengan E-Raport.
+        </h3>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="img/school.svg" class="img-fluid" alt="Ilustrasi sekolah">
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-6 mb-3">
+                <div class="card feature-card text-center p-3 h-100">
+                  <img src="img/qr-school.svg" alt="QR School" class="mx-auto mb-2" style="width:100px;">
+                  <div class="card-body p-1">
+                    <h5 class="card-title fw-bold" style="font-size:0.95rem;">Cepat, Aman, Akurat</h5>
+                    <p class="card-text" style="font-size:0.82rem;">Absensi via scan wajah atau QRCode, mudah untuk guru dan siswa.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 mb-3">
+                <div class="card feature-card text-center p-3 h-100">
+                  <img src="img/schedule.svg" alt="Jadwal" class="mx-auto mb-2" style="width:100px;">
+                  <div class="card-body p-1">
+                    <h5 class="card-title fw-bold" style="font-size:0.95rem;">Akses Jadwal Belajar</h5>
+                    <p class="card-text" style="font-size:0.82rem;">Siswa dan guru mudah mengakses jadwal dan jurnal mengajar.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 mb-3">
+                <div class="card feature-card text-center p-3 h-100">
+                  <img src="img/integration.svg" alt="Integrasi" class="mx-auto mb-2" style="width:100px;">
+                  <div class="card-body p-1">
+                    <h5 class="card-title fw-bold" style="font-size:0.95rem;">Mudah Diintegrasikan</h5>
+                    <p class="card-text" style="font-size:0.82rem;">Terhubung ke Moodle, e-Rapor, atau SIS via Open API.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="col-6 mb-3">
+                <div class="card feature-card text-center p-3 h-100">
+                  <img src="img/message.svg" alt="Notifikasi" class="mx-auto mb-2" style="width:100px;">
+                  <div class="card-body p-1">
+                    <h5 class="card-title fw-bold" style="font-size:0.95rem;">Notifikasi Orangtua</h5>
+                    <p class="card-text" style="font-size:0.82rem;">Pemantauan realtime via WhatsApp & Email ke orang tua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 mb-3">
+          <h2 class="text-center fw-bold" style="color:#023E8A;">Efisiensi Manajemen Kehadiran bagi Karyawan dan HRD</h2>
+          <h3 class="text-center mt-2 mb-4 fw-normal fs-5 text-secondary">
+            Hubgtzsen memberikan solusi modern untuk manajemen kehadiran yang efisien dengan Face ID, QR Code, dan GPS.
+          </h3>
+        </div>
+
+        <div id="carouselFitur" class="carousel slide pb-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="card feature-card h-100">
+                    <div class="row g-0 h-100">
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">Check In & Check Out</h5>
+                          <p class="card-text">Catat waktu kedatangan dan kepulangan via Face ID, QR Code, atau GPS.</p>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                        <img src="img/qr office.svg" class="img-fluid" alt="QR Office">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card feature-card h-100">
+                    <div class="row g-0 h-100">
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">Rekapan Kehadiran</h5>
+                          <p class="card-text">Pantau rekapan kehadiran bulanan karyawan secara transparan dan mudah.</p>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                        <img src="img/archive.svg" class="img-fluid" alt="Rekapan">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="card feature-card h-100">
+                    <div class="row g-0 h-100">
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">Perhitungan Salary</h5>
+                          <p class="card-text">Transparansi perhitungan gaji karyawan berbasis data presensi yang akurat.</p>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                        <img src="img/calculate.svg" class="img-fluid" alt="Salary">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card feature-card h-100">
+                    <div class="row g-0 h-100">
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">Pengajuan Cuti</h5>
+                          <p class="card-text">Formulir pengajuan cuti digital yang efisien dan mudah dikelola karyawan.</p>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                        <img src="img/form.svg" class="img-fluid" alt="Cuti">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="card feature-card h-100">
+                    <div class="row g-0 h-100">
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">Validasi Cuti oleh HRD</h5>
+                          <p class="card-text">Proses cuti lebih transparan dengan validasi langsung dari HRD perusahaan.</p>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                        <img src="img/verifed.svg" class="img-fluid" alt="Validasi">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselFitur" data-bs-slide="prev"
+            style="filter:invert(1) brightness(0.4);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselFitur" data-bs-slide="next"
+            style="filter:invert(1) brightness(0.4);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="text-center mt-2 mb-2">
+          <a href="fitur.html" class="btn text-white fw-bold fs-5 px-5 py-3"
+            style="background-color:#0077B6; border-radius:10px;">Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="harga" aria-labelledby="harga-heading">
+      <div class="container">
+        <h2 class="mb-4 text-center fw-bold" id="harga-heading" style="color:#023e8a;">Pilih Paket Sesuai Kebutuhanmu</h2>
+        <div class="row justify-content-center g-3">
+          <!-- Free Trial -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="price-card card">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  Hubgtzsen&nbsp;
+                  <span class="badge-paket" style="background-color:#0077B6;">Free Trial</span>
+                </div>
+                <h2 class="mb-0 fw-bold">Rp. 0</h2>
+                <p class="text-muted mb-3">Coba gratis</p>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> Absensi wajah</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> 5 partisipan / bulan</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> 125 absen / bulan</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> Basic report</li>
+                </ul>
+              </div>
+             <a href="https://wa.me/6283839531800?text=Halo%20saya%20tertarik%20mencoba%20demo%20gratis%20Hubgtzsen"class="btn-paket"target="_blank">Coba Sekarang</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="price-card card">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  Hubgtzsen&nbsp;
+                  <span class="badge-paket" style="background-color:#0077B6;">Basic</span>
+                </div>
+                <h2 class="mb-0 fw-bold">Rp. 5.500</h2>
+                <p class="text-muted mb-3">Per partisipan / bulan</p>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> Absensi wajah</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> 50 partisipan / bulan</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> 125 absen / bulan</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> Basic report</li>
+                </ul>
+              </div>
+                <a href="https://wa.me/6283839531800?text=Halo%20saya%20tertarik%20membeli%20paket%20basic%20Hubgtzsen" class="btn-paket" target="_blank">Coba Sekarang</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="price-card card" style="border: 2px solid #FFC700;">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  Hubgtzsen&nbsp;
+                  <span class="badge-paket" style="background-color:#FFC700;">Profesional</span>
+                </div>
+                <h2 class="mb-0 fw-bold">Rp. 8.500</h2>
+                <p class="text-muted mb-3">Per partisipan / bulan</p>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-primary"></i> Absensi wajah</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill" style="color:#FFC700;"></i> Unlimited partisipan</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill" style="color:#FFC700;"></i> WhatsApp & Telegram notifikasi</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill" style="color:#FFC700;"></i> Advance reporting</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill" style="color:#FFC700;"></i> Webhook & Rest API</li>
+                </ul>
+              </div>
+              <a href="https://wa.me/6283839531800" class="btn-paket gold">Hubungi Kami</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" aria-labelledby="kontak-heading">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 mb-5 mb-md-0 text-white">
+            <h2 class="fw-bold mb-3" id="kontak-heading">Tertarik Mencoba Hubgtzsen?</h2>
+            <p class="fs-5">Isi formulir ini dan tim kami akan segera menghubungi Anda untuk demo gratis!</p>
+            <ul class="list-unstyled mt-4 fs-5">
+              <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Setup cepat & mudah</li>
+              <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Dukungan tim 24/7</li>
+              <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Trial gratis 14 hari</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <div class="form-card">
+              <h4 class="fw-bold mb-4" style="color:#023e8a;">Hubungi Kami</h4>
+
+              <div id="kontakForm">
+                <div class="mb-3">
+                  <label for="inputNama" class="form-label fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="inputNama" placeholder="Masukkan nama Anda">
+                  <div class="invalid-feedback" id="errNama">Nama tidak boleh kosong.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputEmail" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="contoh@email.com">
+                  <div class="invalid-feedback" id="errEmail">Masukkan alamat email yang valid.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputInstansi" class="form-label fw-semibold">Instansi / Sekolah <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="inputInstansi" placeholder="Nama sekolah atau perusahaan">
+                  <div class="invalid-feedback" id="errInstansi">Instansi tidak boleh kosong.</div>
+                </div>
+                <div class="mb-4">
+                  <label for="inputPesan" class="form-label fw-semibold">Pesan (opsional)</label>
+                  <textarea class="form-control" id="inputPesan" rows="3" placeholder="Tuliskan kebutuhan Anda..."></textarea>
+                </div>
+                <button type="button" id="btn-kirim" onclick="submitForm()">
+                  <i class="bi bi-send me-2"></i>Kirim Pesan
+                </button>
+                <div id="form-success" class="mt-3">
+                  <i class="bi bi-check-circle-fill me-2"></i>
+                  Pesan berhasil dikirim! Tim kami akan segera menghubungi Anda.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer aria-label="Footer Hubgtzsen">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <div class="footer-brand">
+            <img src="img/logo_hubgtzsen-ec9879fc.svg" id="logo-navbar" alt="Logo" style="width:50px;">
+            Hubgtzsen by <a href="#">Gtzcenter</a>
+          </div>
+          <p class="mt-2" style="color:#b0c4de; font-size:0.9rem;">
+            Solusi manajemen absensi modern untuk sekolah, kampus, dan perkantoran di Indonesia.
+          </p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-white fw-bold mb-3">Navigasi</h5>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li class="mb-1"><a href="#home">Home</a></li>
+            <li class="mb-1"><a href="#fitur">Fitur</a></li>
+            <li class="mb-1"><a href="#harga">Harga</a></li>
+            <li class="mb-1"><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <h5 class="text-white fw-bold mb-3">Ikuti Kami</h5>
+          <a href="" class="fw-semibold fs-6 d-flex align-items-center">
+            <img src="img/instagram.png" id="instagram" alt="Instagram">
+            @agatz.dev
+          </a>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright">Copyright &copy; 2026 — PT. GTZCENTER</p>
+    </div>
+  </footer>
+
+  <button id="dark-toggle" title="Toggle Dark Mode" onclick="toggleDarkMode()">
+    <i class="bi bi-moon-stars-fill" id="dark-icon"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+  <script>
+    function submitForm() {
+      let valid = true;
+
+      const nama     = document.getElementById('inputNama');
+      const email    = document.getElementById('inputEmail');
+      const instansi = document.getElementById('inputInstansi');
+      const errNama     = document.getElementById('errNama');
+      const errEmail    = document.getElementById('errEmail');
+      const errInstansi = document.getElementById('errInstansi');
+
+      [nama, email, instansi].forEach(el => {
+        el.classList.remove('is-invalid', 'is-valid');
+      });
+      [errNama, errEmail, errInstansi].forEach(el => el.classList.remove('show'));
+
+      if (nama.value.trim() === '') {
+        nama.classList.add('is-invalid');
+        errNama.classList.add('show');
+        valid = false;
+      } else {
+        nama.classList.add('is-valid');
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        email.classList.add('is-invalid');
+        errEmail.classList.add('show');
+        valid = false;
+      } else {
+        email.classList.add('is-valid');
+      }
+
+      if (instansi.value.trim() === '') {
+        instansi.classList.add('is-invalid');
+        errInstansi.classList.add('show');
+        valid = false;
+      } else {
+        instansi.classList.add('is-valid');
+      }
+
+      if (valid) {
+        document.getElementById('btn-kirim').disabled = true;
+        document.getElementById('btn-kirim').innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Mengirim...';
+        setTimeout(() => {
+          document.getElementById('form-success').style.display = 'block';
+          document.getElementById('btn-kirim').style.display = 'none';
+          nama.value = ''; email.value = ''; instansi.value = '';
+          document.getElementById('inputPesan').value = '';
+          [nama, email, instansi].forEach(el => el.classList.remove('is-valid'));
+        }, 1200);
+      }
+    }
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const icon = document.getElementById('dark-icon');
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        icon.className = 'bi bi-sun-fill';
+        localStorage.setItem('darkMode', 'on');
+      } else {
+        icon.className = 'bi bi-moon-stars-fill';
+        localStorage.setItem('darkMode', 'off');
+      }
+    }
+
+    if (localStorage.getItem('darkMode') === 'on') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('dark-icon').className = 'bi bi-sun-fill';
+    }
+
+    function scrollToKontak() {
+      document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+    }
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 1500;
+        const step = target / (duration / 16);
+        let current = 0;
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target.toLocaleString('id-ID') + (target === 99 ? '%' : '+');
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current).toLocaleString('id-ID');
+          }
+        }, 16);
+      });
+    }
+
+    const statsSection = document.getElementById('stats-bar');
+    let counterDone = false;
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !counterDone) {
+        counterDone = true;
+        animateCounters();
+      }
+    }, { threshold: 0.4 });
+    observer.observe(statsSection);
+
+    ['inputNama', 'inputEmail', 'inputInstansi'].forEach(id => {
+      document.getElementById(id).addEventListener('input', function () {
+        this.classList.remove('is-invalid');
+        const errEl = document.getElementById('err' + id.replace('input', ''));
+        if (errEl) errEl.classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
