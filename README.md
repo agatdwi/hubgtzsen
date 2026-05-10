@@ -1,5 +1,3 @@
-Berikut README.md yang cocok untuk project website Hubgtzsen kamu.
-
 ````md id="r8k2vx"
 # Hubgtzsen
 
@@ -127,7 +125,7 @@ WhatsApp:
 ## 📄 License
 
 Copyright © 2026
-PT. GTZCENTER
+AGATZ
 All Rights Reserved.
 
 ```
