@@ -16,7 +16,7 @@ body {
 
 body.dark-mode {
   background-color: #0f172a !important;
-  background-image: none !important; /* FIX: hilangkan background image agar tidak ada celah putih */
+  background-image: none !important;
   color: #e2e8f0;
 }
 
@@ -49,7 +49,7 @@ body.dark-mode .fitur-hero p {
 
 body.dark-mode #fitur-sekolah,
 body.dark-mode #fitur-kantor {
-  background-color: #0f172a !important; /* FIX: tambah !important agar tidak tertimpa */
+  background-color: #0f172a !important;
 }
 
 body.dark-mode .section-label {
@@ -112,10 +112,6 @@ body.dark-mode .fitur-card .card-text {
 body.dark-mode .fitur-card .card-title {
   color: #90e0ef;
 }
-
-/* ==========================================
-   GENERAL STYLES
-========================================== */
 
 ul {
   list-style-type: none;
