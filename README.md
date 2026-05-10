@@ -7,7 +7,6 @@
 **Sistem Absensi & Monitoring Modern untuk Sekolah, Kampus, dan Perkantoran**
 
 [![Website](https://img.shields.io/badge/Website-hubgtzsen.agatz.my.id-0077B6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://hubgtzsen.agatz.my.id)
-[![WhatsApp](https://img.shields.io/badge/Kontak-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/6283839531800)
 [![Instagram](https://img.shields.io/badge/Instagram-agatz.dev-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/agatz.dev)
 [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)]()
 
@@ -21,9 +20,13 @@
 
 <div align="center">
 
+## 📸 Preview
+
+<div align="center">
+
 | Landing Page | Fitur Sekolah | Harga |
 |:---:|:---:|:---:|
-| *(screenshot)* | *(screenshot)* | *(screenshot)* |
+| <img src="img/landing.png" width="250"/> | <img src="img/sekolah.png" width="250"/> | <img src="img/harga.png" width="250"/> |
 
 </div>
 
