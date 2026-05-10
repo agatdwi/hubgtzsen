@@ -117,9 +117,6 @@ Saat website dibagikan ke WhatsApp/Facebook akan muncul:
 Instagram:
 @agatz.dev
 
-WhatsApp:
-+62 838-3953-1800
-
 ---
 
 ## 📄 License
