@@ -18,6 +18,7 @@ function applyDarkMode() {
     if (icon) icon.className = 'bi bi-sun-fill'
   }
 }
+
 function submitForm() {
   let valid = true
 
@@ -28,12 +29,12 @@ function submitForm() {
   const errEmail    = document.getElementById('errEmail')
   const errInstansi = document.getElementById('errInstansi')
 
-  if (!nama) return 
+  if (!nama) return
 
-  [nama, email, instansi].forEach(el => {
+  ;[nama, email, instansi].forEach(el => {
     el.classList.remove('is-invalid', 'is-valid')
   })
-  [errNama, errEmail, errInstansi].forEach(el => el.classList.remove('show'))
+  ;[errNama, errEmail, errInstansi].forEach(el => el.classList.remove('show'))
 
   if (nama.value.trim() === '') {
     nama.classList.add('is-invalid')
@@ -51,6 +52,7 @@ function submitForm() {
   } else {
     email.classList.add('is-valid')
   }
+
   if (instansi.value.trim() === '') {
     instansi.classList.add('is-invalid')
     errInstansi.classList.add('show')
@@ -58,6 +60,7 @@ function submitForm() {
   } else {
     instansi.classList.add('is-valid')
   }
+
   if (valid) {
     const btn = document.getElementById('btn-kirim')
     btn.disabled = true
@@ -66,15 +69,23 @@ function submitForm() {
     setTimeout(() => {
       document.getElementById('form-success').style.display = 'block'
       btn.style.display = 'none'
-      nama.value = '' email.value = '' instansi.value = ''
+      nama.value = ''
+      email.value = ''
+      instansi.value = ''
       document.getElementById('inputPesan').value = ''
-      [nama, email, instansi].forEach(el => el.classList.remove('is-valid'))
+      ;[nama, email, instansi].forEach(el => el.classList.remove('is-valid'))
     }, 1200)
   }
 }
 
+function scrollToKontak() {
+  const target = document.getElementById('kontak')
+  if (target) target.scrollIntoView({ behavior: 'smooth' })
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-  ['inputNama', 'inputEmail', 'inputInstansi'].forEach(id => {
+  applyDarkMode()
+  ;['inputNama', 'inputEmail', 'inputInstansi'].forEach(id => {
     const el = document.getElementById(id)
     if (!el) return
     el.addEventListener('input', function () {
@@ -83,51 +94,42 @@ document.addEventListener('DOMContentLoaded', function () {
       if (errEl) errEl.classList.remove('show')
     })
   })
-})
 
-function scrollToKontak() {
-  const target = document.getElementById('kontak')
-  if (target) target.scrollIntoView({ behavior: 'smooth' })
-}
-
-document.addEventListener('DOMContentLoaded', function () {
   const statsSection = document.getElementById('stats-bar')
-  if (!statsSection) return
+  if (statsSection) {
+    let counterDone = false
 
-  let counterDone = false
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number')
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'))
+        const suffix = counter.getAttribute('data-suffix') || ''
+        const duration = 1500
+        const step = target / (duration / 16)
+        let current = 0
 
-  function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number')
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target'))
-      const suffix = counter.getAttribute('data-suffix') || ''
-      const duration = 1500
-      const step = target / (duration / 16)
-      let current = 0
-
-      const timer = setInterval(() => {
-        current += step
-        if (current >= target) {
-          counter.textContent = target.toLocaleString('id-ID') + suffix
-          clearInterval(timer)
-        } else {
-          counter.textContent = Math.floor(current).toLocaleString('id-ID')
-        }
-      }, 16)
-    })
-  }
-  
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !counterDone) {
-      counterDone = true
-      animateCounters()
+        const timer = setInterval(() => {
+          current += step
+          if (current >= target) {
+            counter.textContent = target.toLocaleString('id-ID') + suffix
+            clearInterval(timer)
+          } else {
+            counter.textContent = Math.floor(current).toLocaleString('id-ID')
+          }
+        }, 16)
+      })
     }
-  }, { threshold: 0.4 })
 
-  observer.observe(statsSection)
-})
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !counterDone) {
+        counterDone = true
+        animateCounters()
+      }
+    }, { threshold: 0.4 })
 
-document.addEventListener('DOMContentLoaded', function () {
+    observer.observe(statsSection)
+  }
+
   const sections = document.querySelectorAll('section[id]')
   const navLinks = document.querySelectorAll('.nav-link')
 
@@ -144,9 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   })
-})
-
-document.addEventListener('DOMContentLoaded', function () {
+  
   const cards = document.querySelectorAll('.card')
   cards.forEach(card => {
     card.addEventListener('mouseenter', function () {
