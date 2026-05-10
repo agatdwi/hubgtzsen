@@ -33,6 +33,53 @@ body.dark-mode .card {
   border-color: #334155;
 }
 
+body.dark-mode .fitur-hero {
+  background: linear-gradient(135deg, #0d1117 0%, #1e293b 100%) !important;
+}
+
+body.dark-mode .fitur-hero h1 {
+  color: #90e0ef;
+}
+
+body.dark-mode .fitur-hero p {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+body.dark-mode #fitur-sekolah,
+body.dark-mode #fitur-kantor {
+  background-color: #0f172a;
+}
+
+body.dark-mode .section-label {
+  background-color: #1e3a5f !important;
+  color: #90e0ef;
+}
+
+body.dark-mode #fitur-sekolah h2,
+body.dark-mode #fitur-kantor h2 {
+  color: #90e0ef !important;
+}
+
+
+body.dark-mode .section-divider {
+  background-color: #0d2137 !important;
+}
+
+body.dark-mode a.btn[style*="border: 2px solid #0077B6"] {
+  border-color: #90e0ef !important;
+  color: #90e0ef !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode a.btn[style*="border: 2px solid #0077B6"]:hover {
+  background-color: #1e3a5f !important;
+}
+
+body.dark-mode .text-secondary {
+  color: #94a3b8 !important;
+}
+
 body.dark-mode .fitur-section,
 body.dark-mode #fitur {
   background-color: #1e293b;
