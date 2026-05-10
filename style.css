@@ -28,10 +28,22 @@ body.dark-mode .navbar a {
   color: #e2e8f0 !important;
 }
 
-body.dark-mode .card {
+body.dark-mode .card,
+body.dark-mode .feature-card,
+body.dark-mode .price-card,
+body.dark-mode .fitur-card {
   background-color: #1e293b;
   color: #e2e8f0;
   border-color: #334155;
+}
+
+body.dark-mode .card-text,
+body.dark-mode .fitur-card .card-text {
+  color: #cbd5e1;
+}
+
+body.dark-mode .fitur-card .card-title {
+  color: #90e0ef;
 }
 
 body.dark-mode .fitur-hero {
@@ -47,14 +59,22 @@ body.dark-mode .fitur-hero p {
   opacity: 1;
 }
 
+body.dark-mode #home {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+body.dark-mode #fitur,
+body.dark-mode .fitur-section {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode #fitur h2 {
+  color: #90e0ef;
+}
+
 body.dark-mode #fitur-sekolah,
 body.dark-mode #fitur-kantor {
   background-color: #0f172a !important;
-}
-
-body.dark-mode .section-label {
-  background-color: #1e3a5f !important;
-  color: #90e0ef;
 }
 
 body.dark-mode #fitur-sekolah h2,
@@ -62,8 +82,21 @@ body.dark-mode #fitur-kantor h2 {
   color: #90e0ef !important;
 }
 
+body.dark-mode #harga {
+  background-color: #1e3a5f !important;
+}
+
+body.dark-mode .section-label {
+  background-color: #1e3a5f !important;
+  color: #90e0ef;
+}
+
 body.dark-mode .section-divider {
   background-color: #0d2137 !important;
+}
+
+body.dark-mode .text-secondary {
+  color: #94a3b8 !important;
 }
 
 body.dark-mode a.btn[style*="border: 2px solid #0077B6"] {
@@ -74,43 +107,6 @@ body.dark-mode a.btn[style*="border: 2px solid #0077B6"] {
 
 body.dark-mode a.btn[style*="border: 2px solid #0077B6"]:hover {
   background-color: #1e3a5f !important;
-}
-
-body.dark-mode .text-secondary {
-  color: #94a3b8 !important;
-}
-
-body.dark-mode .fitur-section,
-body.dark-mode #fitur {
-  background-color: #1e293b !important;
-}
-
-body.dark-mode #fitur h2 {
-  color: #90e0ef;
-}
-
-body.dark-mode #home {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
-}
-
-body.dark-mode #harga {
-  background-color: #1e3a5f !important;
-}
-
-body.dark-mode .feature-card,
-body.dark-mode .price-card,
-body.dark-mode .fitur-card {
-  background-color: #1e293b;
-  color: #e2e8f0;
-}
-
-body.dark-mode .card-text,
-body.dark-mode .fitur-card .card-text {
-  color: #cbd5e1;
-}
-
-body.dark-mode .fitur-card .card-title {
-  color: #90e0ef;
 }
 
 ul {
@@ -184,25 +180,13 @@ span {
 }
 
 @keyframes floatUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 #btn-coba-sekarang {
@@ -395,13 +379,8 @@ span {
   box-shadow: none;
 }
 
-.form-control.is-invalid {
-  border-color: #dc3545;
-}
-
-.form-control.is-valid {
-  border-color: #198754;
-}
+.form-control.is-invalid { border-color: #dc3545; }
+.form-control.is-valid { border-color: #198754; }
 
 .invalid-feedback {
   font-size: 0.82rem;
@@ -455,9 +434,7 @@ footer a {
   transition: color 0.2s;
 }
 
-footer a:hover {
-  color: #ffffff;
-}
+footer a:hover { color: #ffffff; }
 
 footer hr {
   border: none;
@@ -529,51 +506,18 @@ footer hr {
 }
 
 @media (max-width: 768px) {
-  #home {
-    text-align: center;
-    padding: 40px 15px;
-  }
-
-  .content-kanan {
-    font-size: 0.95rem;
-  }
-
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
-  .form-card {
-    padding: 24px;
-  }
-
-  #dark-toggle {
-    bottom: 16px;
-    right: 16px;
-  }
-
-  #btn-coba-sekarang {
-    width: 100%;
-  }
-
-  .fitur-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .fitur-card img {
-    width: 60%;
-  }
-
-  .fitur-card .card-title {
-    font-size: 1.1rem;
-  }
+  #home { text-align: center; padding: 40px 15px; }
+  .content-kanan { font-size: 0.95rem; }
+  .stat-number { font-size: 1.5rem; }
+  .form-card { padding: 24px; }
+  #dark-toggle { bottom: 16px; right: 16px; }
+  #btn-coba-sekarang { width: 100%; }
+  .fitur-hero h1 { font-size: 1.8rem; }
+  .fitur-card img { width: 60%; }
+  .fitur-card .card-title { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
-  .stat-number {
-    font-size: 1.2rem;
-  }
-
-  #fitur h2, #harga h2 {
-    font-size: 1.3rem;
-  }
+  .stat-number { font-size: 1.2rem; }
+  #fitur h2, #harga h2 { font-size: 1.3rem; }
 }
